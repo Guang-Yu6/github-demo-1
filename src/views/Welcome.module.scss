@@ -1,0 +1,22 @@
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: sandybrown;
+  > header {
+    flex-shrink: 0;
+    background: pink;
+    display: flex;
+    flex-direction:column ;  // 上下排列
+    justify-content: center;  //水平方向从左到右，盒子居中
+    align-items: center;//居中对齐弹性盒的各项 <div> 元素
+  }
+  >main {
+    flex-grow: 1;
+
+  }
+  >footer {
+    flex-shrink: 0;
+
+  }
+}
