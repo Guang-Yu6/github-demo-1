@@ -1,5 +1,3 @@
-import {Foo} from "../views/Foo";
-import {Bar} from "../views/Bar";
 import {First} from "../components/welcome/first";
 import {Second} from "../components/welcome/second";
 import {Third} from "../components/welcome/third";
@@ -9,13 +7,12 @@ import {RouteRecordRaw} from "vue-router";
 
 
 export const routes:RouteRecordRaw[] = [
-    {path: '/', component: Foo},
-    {path: '/about', component: Bar},
+    {path: '/', redirect:'/welcome'},
     {
-        path: '/wel',
+        path: '/welcome',
         component: Welcome,
         children: [
-
+            {path:'',redirect:'/welcome/1'},
             {path: '1', component: First},
             {path: '2', component: Second},
             {path: '3', component: Third},

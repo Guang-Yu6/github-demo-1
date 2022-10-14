@@ -1,18 +1,23 @@
 .wrapper {
-  height: 100vh;
+  height: calc(100vh - var(--welcome-nav-height));
   display: flex;
   flex-direction: column;
-  color: sandybrown;
+  margin-bottom: var(--welcome-nav-height);
+  //线性背景se
+  background-image: linear-gradient(to bottom,var(--welcome-bg-start) 0%,var(--welcome-bg-end) 100%);
   > header {
     flex-shrink: 0;
-    background: pink;
     display: flex;
     flex-direction:column ;  // 上下排列
     justify-content: center;  //水平方向从左到右，盒子居中
     align-items: center;//居中对齐弹性盒的各项 <div> 元素
+    padding-top: 66px;
+    color: #D4D4EE;
   }
   >main {
     flex-grow: 1;
+    display: flex;
+    flex-direction:column ;
 
   }
   >footer {
